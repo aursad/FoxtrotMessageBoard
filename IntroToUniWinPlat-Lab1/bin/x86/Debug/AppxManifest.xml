@@ -22,9 +22,13 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="IntroToUniWinPlat-Lab1.exe" EntryPoint="IntroToUniWinPlat_Lab1.App">
-      <uap:VisualElements DisplayName="IntroToUniWinPlat-Lab1" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="IntroToUniWinPlat-Lab1" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      <uap:VisualElements DisplayName="IntroToUniWinPlat-Lab1" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="IntroToUniWinPlat-Lab1" BackgroundColor="#FF7619">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#FF7619" />
       </uap:VisualElements>
     </Application>
   </Applications>

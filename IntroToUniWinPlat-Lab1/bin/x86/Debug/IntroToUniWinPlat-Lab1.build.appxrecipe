@@ -21,6 +21,9 @@
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\24_200.png">
+      <PackagePath>Assets\24_200.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
@@ -40,9 +43,12 @@
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\visma.png">
+      <PackagePath>Assets\visma.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>

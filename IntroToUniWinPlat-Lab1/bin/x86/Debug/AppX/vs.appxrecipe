@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>26eb4f22-ab9d-4f24-bb80-e9d05df663db</PackageIdentityName>
     <IntermediateOutputPath>E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>DE3AB8084584C03689258694E7352EC563DA4745F7C19BA987CF3512E5C2334F</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>C4FD732AAEB748D7A4CD4F9818811F469467C49AACC6BDCBC088EC2B5127318C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>26eb4f22-ab9d-4f24-bb80-e9d05df663db_1.0.0.0_x86__09nfddzjby9p0</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>26eb4f22-ab9d-4f24-bb80-e9d05df663db_09nfddzjby9p0!App</RegisteredUserModeAppID>
     <RegisteredPackageID>26eb4f22-ab9d-4f24-bb80-e9d05df663db</RegisteredPackageID>
@@ -22,7 +22,7 @@
     <AppXManifest Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-11T08:14:47.786</Modified>
+      <Modified>2015-10-13T17:51:30.127</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -30,39 +30,47 @@
       <PackagePath>ApplicationInsights.config</PackagePath>
       <Modified>2015-10-11T08:11:37.506</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\24_200.png">
+      <PackagePath>Assets\24_200.png</PackagePath>
+      <Modified>2015-10-13T17:37:21.155</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2015-08-26T22:38:34.000</Modified>
+      <Modified>2015-10-12T19:42:34.675</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-26T22:38:34.000</Modified>
+      <Modified>2015-10-13T17:15:43.434</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-26T22:38:34.000</Modified>
+      <Modified>2015-10-13T17:22:30.815</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-26T22:38:34.000</Modified>
+      <Modified>2015-10-13T17:22:30.812</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-26T22:38:34.000</Modified>
+      <Modified>2015-10-13T17:25:35.042</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-26T22:38:34.000</Modified>
+      <Modified>2015-10-13T17:15:43.426</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\visma.png">
+      <PackagePath>Assets\visma.png</PackagePath>
+      <Modified>2015-10-13T17:43:36.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-26T22:38:34.000</Modified>
+      <Modified>2015-10-13T17:22:30.818</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Autofac.dll">
       <PackagePath>Autofac.dll</PackagePath>
@@ -74,15 +82,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\entrypoint\IntroToUniWinPlat-Lab1.exe">
       <PackagePath>entrypoint\IntroToUniWinPlat-Lab1.exe</PackagePath>
-      <Modified>2015-10-11T08:14:44.181</Modified>
+      <Modified>2015-10-13T17:51:26.318</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\IntroToUniWinPlat-Lab1.exe">
       <PackagePath>IntroToUniWinPlat-Lab1.exe</PackagePath>
-      <Modified>2015-10-11T08:14:47.781</Modified>
+      <Modified>2015-10-13T17:51:30.126</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\IntroToUniWinPlat-Lab1.xr.xml">
       <PackagePath>IntroToUniWinPlat-Lab1.xr.xml</PackagePath>
-      <Modified>2015-10-11T08:14:44.009</Modified>
+      <Modified>2015-10-13T17:51:26.044</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -126,7 +134,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-10-11T08:14:45.587</Modified>
+      <Modified>2015-10-13T17:51:27.763</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\programming\IntroToUniWinPlat-Lab1\IntroToUniWinPlat-Lab1\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
