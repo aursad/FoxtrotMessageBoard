@@ -4,27 +4,76 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:IntroToUniWinPlat_Lab1.Model"
+    xmlns:local="using:IntroToUniWinPlat_Lab1"
     mc:Ignorable="d">
 
-    <Grid x:Name="LayoutRoot" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,10,12,12">
+    <Page.Resources>
+        <!-- Use a collection view source for content that presents itself as a list of items that can be grouped or sorted.  Otherwise, you can use x:Bind
+        directly on the ListView's item source to for further optimization. Please see the AppUIBasics sample for an example of how to do this.  -->
+        <CollectionViewSource x:Name="ContactsCVS"  IsSourceGrouped="True" />
+
+        <!-- When using x:Bind, you need to set x:DataType -->
+        <DataTemplate x:Name="ContactListViewTemplate" x:DataType="model:Contact">
+            <Grid RightTapped="RightTapped">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Ellipse x:Name="Ellipse"
+                         Grid.RowSpan="2"
+                         Width ="32"
+                         Height="32"
+                         Margin="6"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         Fill="LightGray"/>
+                <TextBlock Grid.Column="1"
+                           Text="{x:Bind Name}" 
+                           x:Phase="1"  
+                           Style="{ThemeResource BaseTextBlockStyle}"
+                           Margin="12,6,0,0"/>
+                <TextBlock  Grid.Column="1"
+                            Grid.Row="1"
+                            Text="{x:Bind Position}" 
+                            x:Phase="2"
+                            Style="{ThemeResource BodyTextBlockStyle}"
+                            Margin="12,0,0,6"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="Input" Grid.Row="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Row="0" Style="{StaticResource BasicTextStyle}" TextWrapping="Wrap">
-                Right-click or press-and-hold on the image to show a simple context menu.
-            </TextBlock>
-            <TextBlock x:Name="AttachmentImage" Grid.Row="1" RightTapped="AttachmentImage_RightTapped" HorizontalAlignment="Left" Text="&#xE132;" FontFamily="Segoe UI Symbol" FontSize="40" />
-        </Grid>
+        <ListView ItemsSource="{x:Bind ContactsCVS.View}"
+                  ItemTemplate="{StaticResource ContactListViewTemplate}"
+                  SelectionMode="Single"
+                  ShowsScrollingPlaceholders="True"
+                  Grid.Row="1"
+                  Grid.ColumnSpan="2">
 
-        <Grid x:Name="Output" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <TextBlock x:Name="OutputTextBlock" Style="{StaticResource BasicTextStyle}" TextWrapping="Wrap"/>
-        </Grid>
+            <ListView.GroupStyle>
+                <GroupStyle >
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate x:DataType="model:GroupInfoList">
+                            <TextBlock Text="{x:Bind Key}" 
+                                       Style="{ThemeResource TitleTextBlockStyle}"/>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListView.GroupStyle>
+        </ListView>
     </Grid>
 </Page>

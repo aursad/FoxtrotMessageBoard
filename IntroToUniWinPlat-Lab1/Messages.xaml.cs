@@ -1,10 +1,12 @@
 ﻿using System;
 using Windows.Foundation;
 using Windows.UI.Popups;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using IntroToUniWinPlat_Lab1.Model;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -18,6 +20,29 @@ namespace IntroToUniWinPlat_Lab1
         public Messages()
         {
             this.InitializeComponent();
+            ContactsCVS.Source = Contact.GetContactsGrouped(25);
+        }
+
+        private new async void RightTapped(object sender, RightTappedRoutedEventArgs e)
+        {
+            // Create a menu and add commands specifying a callback delegate for each.
+            // Since command delegates are unique, no need to specify command Ids.
+            var menu = new PopupMenu();
+            menu.Commands.Add(new UICommand("Open url", (command) =>
+            {
+                OpenPage();
+            }));
+            menu.Commands.Add(new UICommand("Copy text", (command) =>
+            {
+                CopyText();
+            }));
+
+
+            var chosenCommand = await menu.ShowForSelectionAsync(GetElementRect((FrameworkElement)sender));
+            if (chosenCommand == null) // The command is null if no command was invoked.
+            {
+
+            }
         }
 
         public static Rect GetElementRect(FrameworkElement element)
@@ -27,28 +52,14 @@ namespace IntroToUniWinPlat_Lab1
             return new Rect(point, new Size(element.ActualWidth, element.ActualHeight));
         }
 
-        private async void AttachmentImage_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        private void CopyText()
         {
-            // Create a menu and add commands specifying a callback delegate for each.
-            // Since command delegates are unique, no need to specify command Ids.
-            var menu = new PopupMenu();
-            menu.Commands.Add(new UICommand("Open with", (command) =>
-            {
-                OutputTextBlock.Text = "'" + command.Label + "' selected";
-            }));
-            menu.Commands.Add(new UICommand("Save attachment", (command) =>
-            {
-                OutputTextBlock.Text = "'" + command.Label + "' selected";
-            }));
+            var item = 1;
+        }
 
-            // We don't want to obscure content, so pass in a rectangle representing the sender of the context menu event.
-            // We registered command callbacks; no need to handle the menu completion event
-            OutputTextBlock.Text = "Context menu shown";
-            var chosenCommand = await menu.ShowForSelectionAsync(GetElementRect((FrameworkElement)sender));
-            if (chosenCommand == null) // The command is null if no command was invoked.
-            {
-                OutputTextBlock.Text = "Context menu dismissed";
-            }
+        private void OpenPage()
+        {
+            var item = 1;
         }
     }
 }
