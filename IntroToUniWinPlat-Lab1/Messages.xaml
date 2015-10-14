@@ -5,7 +5,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:model="using:IntroToUniWinPlat_Lab1.Model"
-    xmlns:local="using:IntroToUniWinPlat_Lab1"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -14,7 +13,7 @@
         <CollectionViewSource x:Name="ContactsCVS"  IsSourceGrouped="True" />
 
         <!-- When using x:Bind, you need to set x:DataType -->
-        <DataTemplate x:Name="ContactListViewTemplate" x:DataType="model:Contact">
+        <DataTemplate x:Name="ContactListViewTemplate" x:DataType="model:Tweet">
             <Grid RightTapped="RightTapped">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -31,15 +30,19 @@
                          Margin="6"
                          VerticalAlignment="Center"
                          HorizontalAlignment="Center"
-                         Fill="LightGray"/>
+                         >
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="{x:Bind CreatedBy.ProfileImageUrl}"/>
+                    </Ellipse.Fill>
+                </Ellipse>
                 <TextBlock Grid.Column="1"
-                           Text="{x:Bind Name}" 
+                           Text="{x:Bind CreatedBy.Name}" 
                            x:Phase="1"  
                            Style="{ThemeResource BaseTextBlockStyle}"
                            Margin="12,6,0,0"/>
                 <TextBlock  Grid.Column="1"
                             Grid.Row="1"
-                            Text="{x:Bind Position}" 
+                            Text="{x:Bind Text}" 
                             x:Phase="2"
                             Style="{ThemeResource BodyTextBlockStyle}"
                             Margin="12,0,0,6"/>
@@ -57,7 +60,14 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <ListView ItemsSource="{x:Bind ContactsCVS.View}"
+        <StackPanel>
+            <Button Background="Transparent" HorizontalAlignment="Right" Click="RefreshButton" VerticalAlignment="Top" Foreground="Black">
+                <FontIcon x:Name="Refresh" FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;" Margin="0,4,0,0"/>
+            </Button>
+        </StackPanel>
+        
+        <ListView x:Name="ListView" 
+                ItemsSource="{x:Bind ContactsCVS.View}"
                   ItemTemplate="{StaticResource ContactListViewTemplate}"
                   SelectionMode="Single"
                   ShowsScrollingPlaceholders="True"
